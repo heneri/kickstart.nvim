@@ -928,7 +928,21 @@ require('lazy').setup({
       }
     end,
   },
+  {
+    'github/copilot.vim',
+    config = function()
+      -- Disable Copilot by default
+      vim.g.copilot_enabled = false
 
+      -- Use default keybindings:
+      -- Tab      → Accept suggestion
+      -- Ctrl+]   → Next suggestion
+      -- Ctrl+[   → Previous suggestion
+      -- Ctrl+x   → Dismiss suggestion
+
+      -- No custom mappings needed since we want defaults
+    end,
+  },
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
